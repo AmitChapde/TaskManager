@@ -7,7 +7,7 @@ const taskRoutes = require("./routes/task.routes");
 const app = express();
 const PORT = 8082;
 
-const DB_URI = `mongodb+srv://AmitChapde:${encodeURIComponent(process.env.DB_PASSWORD)}@taskmanager.499kz.mongodb.net/taskmanager?retryWrites=true&w=majority&appName=taskManager`;
+const DB_URI = process.env.MONGODB_URL;
 
 // Middleware
 app.use(cors());
