@@ -9,6 +9,7 @@ const PORT = 8082;
 
 const DB_URI = process.env.MONGODB_URL;
 
+
 // Middleware
 app.use(cors());
 app.use(express.json());
@@ -26,7 +27,11 @@ mongoose
   .then(() => console.log("DB Connected!"))
   .catch((error) => console.error("Error in connecting DB", error));
 
+
 // Start Server
 app.listen(PORT, () => {
   console.log(`Backend listening on Port ${PORT}!`);
 });
+
+
+
